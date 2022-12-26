@@ -56,9 +56,10 @@ def calldbFunc(request):
             pdata=jpredx(tradingArea,smallBusiType) 
         elif BigTradingArea == "관광특구":
             pdata=culpredx(tradingArea,smallBusiType)
-        print(pdata)
+        print(pdata.empty)
+        
         # 해당 상권에 선택한 서비스업종이 있다면
-        if len(pdata) != 0:
+        if not pdata.empty :
             # pdata에서 각 분기별로 값을 꺼낸다.
             pred1 = model.predict(pdata.iloc[0])
             pred2 = model.predict(pdata.iloc[1])
@@ -88,7 +89,7 @@ def calldbFunc(request):
             time21= rdata[2]['2021'].values.tolist()
             print(time21)
         # 0이 넘어온다면 0을 담는다.
-        elif pdata == False:
+        else:
             result1=0; result2=0; result3=0; result4=0; jum19=0; jum20=0; jum21=0; 
             gen19=0; gen20=0; gen21=0; time19=0; time20=0; time21=0; 
             
@@ -193,7 +194,7 @@ def balpredx(tradingArea,smallBusiType):
 
         return predictdata
     else:
-        return False
+        return pd.DataFrame()
     
 def golpredx(tradingArea,smallBusiType):
     global dfdata
@@ -228,7 +229,7 @@ def golpredx(tradingArea,smallBusiType):
   
         return predictdata 
     else:
-        return False
+        return pd.DataFrame()
 
 def jpredx(tradingArea,smallBusiType):
     global dfdata
@@ -262,7 +263,7 @@ def jpredx(tradingArea,smallBusiType):
             
         return predictdata
     else:
-        return False
+        return pd.DataFrame()
 
 def culpredx(tradingArea,smallBusiType):
     global dfdata
@@ -299,4 +300,4 @@ def culpredx(tradingArea,smallBusiType):
             
         return predictdata 
     else:
-        return False
+        return pd.DataFrame()
