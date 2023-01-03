@@ -15,6 +15,7 @@
 * [참조 사이트](#참조-사이트)
 
 ## 시연 동영상
+* [시연동영상](https://youtu.be/ujJxUL6MfA0)
 
 ## 회의록
 1. [팀장 회의 - 팀 선정 및 프로젝트 설명](https://justdojustin.tistory.com/50)
@@ -32,7 +33,7 @@
 * [화면정의서](https://docs.google.com/presentation/d/1YypgBo2MCVdZVHRleeFGBvraXvuPCPOf4g5z-fwrZg0/edit#slide=id.p)
 * [WBS(Work Breakdown Structure)](https://docs.google.com/spreadsheets/d/1DsW8wfOfBu1VqastvK6YuBT5czBZfACZJwIsM4Kl9CA/edit#gid=0)
 * [Figma 사이트맵](https://www.figma.com/file/Alkps3dZyeL7UepkwGyzKG/b4a?node-id=79%3A15)
-* 발표 PPT (K-Digital Training 양식)
+* [발표 자료.pdf](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e9a94698-78e7-4317-969b-d3960651d4bf/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C%EC%9A%A9%EC%82%B0%EA%B5%AC_%EC%83%81%EA%B6%8C%EB%B6%84%EC%84%9D_%EB%B0%8F_%EB%A7%A4%EC%B6%9C%EC%98%88%EC%B8%A1_%EC%84%9C%EB%B9%84%EC%8A%A4.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230103T072639Z&X-Amz-Expires=86400&X-Amz-Signature=4f0e03d0127dd05ae70d2ed30ad8e351718576bfbb391333c40f25a32e8270fc&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22%255B%25EB%25B0%259C%25ED%2591%259C%25EC%259E%2590%25EB%25A3%258C%255D%25EC%259A%25A9%25EC%2582%25B0%25EA%25B5%25AC%2520%25EC%2583%2581%25EA%25B6%258C%25EB%25B6%2584%25EC%2584%259D%2520%25EB%25B0%258F%2520%25EB%25A7%25A4%25EC%25B6%259C%25EC%2598%2588%25EC%25B8%25A1%2520%25EC%2584%259C%25EB%25B9%2584%25EC%258A%25A4.pdf%22&x-id=GetObject)
 
 ## 사용 데이터
 1. [서울시_우리마을가게_상권분석서비스(신_상권_추정매출)_2019년.csv](https://data.seoul.go.kr/dataList/OA-15572/S/1/datasetView.do)
@@ -54,12 +55,12 @@
 * 탐색적 데이터 분석을 수행하기 위한 데이터 정제, 시각화 방법 학습
 
 ## 데이터 분석 과정
-------------- 데이터 관련 글 참고해서 쓰기 ------------
-### 1. 데이터 탐색 및 전처리
-* 변수 정의
+데이터 정의 및 탐색과정을 시각적으로 이해를 돕기 위해 [notion](https://cliff-celestite-93e.notion.site/33ae79a124b549a584f9c3e2d720adba)에 기록
 
+### 데이터 모델구축
+[데이터 전처리부터 모델구축까지의 과정](https://github.com/JustinChoiHokyeong/aniorimiro/blob/master/aniorimiro/static/data/module/yong_ols.py)
 
-#### 1) 데이터 시각화(차트 생성)
+### 1) 데이터 시각화(차트 생성)
 
 ```javascript
 // 예측 모델 차트 시각화
@@ -84,8 +85,6 @@ Highcharts.chart('container', {
 		{name: "3분기",y: data.result3,},
 		{name: "4분기",y: data.result4,}]}]});
 ```
-
-### 2. 모델링
 
 ## 웹 개발 과정
 ### 1. 장고
